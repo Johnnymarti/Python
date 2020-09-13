@@ -1,0 +1,28 @@
+x = int(input("enter a number: "))
+y = int(input("enter another number: "))
+z = int(input("enter a third number: "))
+b = None
+m = None
+s = None
+
+if x > y:
+ b = x
+ m = y
+ 
+elif x < y:
+ m = x
+ b = y
+
+if b > z:
+ if m > z:
+   s = z
+ elif m < z:
+   s = m
+   m = z
+
+elif b < z:
+ b = z
+ m = x
+ s = y
+
+print(m)
