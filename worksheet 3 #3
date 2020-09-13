@@ -1,0 +1,8 @@
+quantity_even = 0
+
+for x in range(5):
+ number = int( input("enter a number: ") )
+ if is_it_even( number ):
+   # increase quantity of even numbers
+   quantity_even = quantity_even + 1
+print("there are", quantity_even, "even numbers")
