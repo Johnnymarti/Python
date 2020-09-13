@@ -1,0 +1,15 @@
+x = 5
+print('Pick a number 1-10!')
+
+guess = int(input("Enter: "))
+
+if (guess < 5):
+    print("you are too low!")
+    guess = int(input("Enter: "))
+  
+if (guess > 5):
+    print("you are too high!")
+    guess = int(input("Enter: "))
+  
+if (guess == 5):
+    print("you got it!")
