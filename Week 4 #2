@@ -1,0 +1,3 @@
+q1 = "bee hive "
+x = int(input("enter a number: "))
+print(q1 * x)
