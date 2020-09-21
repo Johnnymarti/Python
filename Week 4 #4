@@ -1,0 +1,6 @@
+bigger10 = 10
+x = int(input("enter a number: "))
+if x < bigger10:
+ print("10")
+elif x > bigger10:
+ print(x)
