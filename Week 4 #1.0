@@ -1,0 +1,2 @@
+q1 = "bee hive "
+print(q1 * 5)
