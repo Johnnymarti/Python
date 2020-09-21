@@ -1,0 +1,6 @@
+age1 = int(input("enter your age: "))
+age2 = int(input("enter your friend's age: "))
+if age1 < age2:
+ print("The older of the two people is", age2, "years old!")
+elif age1 > age2:
+ print("The older of the two people is", age1, "years old!")
