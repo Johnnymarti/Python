@@ -17,3 +17,12 @@ def january_day(day_of_the_week):
   if day_of_the_week == 7:
     day = "Tuesday"
   return day
+
+#This should print "Wednesday"
+print("The 1st Day of January is", january_day(1))
+
+#This should print "Thursday"
+print("The 30th day in January is", january_day(30))
+
+#This should print "Sunday"
+print("The 19th day in January is", january_day(19))
