@@ -1,0 +1,28 @@
+def number_to_day(number_to_day):
+  while number_to_day > 7:
+    number_to_day = number_to_day - 7
+  day = None 
+  if number_to_day == 1:
+    day = "Wednesday"
+  if number_to_day == 2:
+    day = "Thursday"
+  if number_to_day == 3:
+    day = "Friday"
+  if number_to_day == 4:
+    day = "Saturday"  
+  if number_to_day == 5:
+    day = "Sunday"
+  if number_to_day == 6:
+    day = "Monday"
+  if number_to_day == 7:
+    day = "Tuesday"
+  return day
+
+#This should print "Wednesday"
+print("The 1st Day of 2020 is", number_to_day(1))
+
+#This should print "Sunday"
+print("The 19th day in 2020 is", number_to_day(19))
+
+#This should print "Thursday"
+print("The 100th day in 2020 is", number_to_day(100))
