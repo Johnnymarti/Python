@@ -1,0 +1,17 @@
+def day_of_the_week(x):
+  day = None 
+  if x == 1:
+    day = "Wednesday"
+  if x == 2:
+    day = "Thursday"
+  if x == 3:
+    day = "Friday"
+  if x == 4:
+    day = "Saturday"  
+  if x == 5:
+    day = "Sunday"
+  if x == 6:
+    day = "Monday"
+  if x == 7:
+    day = "Tuesday"
+  return day
