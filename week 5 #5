@@ -1,0 +1,33 @@
+def month_to_num(month_to_num):
+  x = None
+  if month_to_num == "January":
+    x = 1
+  if month_to_num == "February":
+    x = 2
+  if month_to_num == "March":
+    x = 3
+  if month_to_num == "April":
+    x = 4
+  if month_to_num == "May":
+    x = 5
+  if month_to_num == "June":
+    x = 6
+  if month_to_num == "July":
+    x = 7
+  if month_to_num == "August":
+    x = 8
+  if month_to_num == "September":
+    x = 9
+  if month_to_num == "October":
+    x = 10
+  if month_to_num == "November":
+    x = 11
+  if month_to_num == "December":
+    x = 12
+  return x
+
+#This should print 3
+print("March is the number", month_to_num("March"), "month of the year")
+
+#This should print 11
+print("November is the number", month_to_num("November"), "month of the year")
