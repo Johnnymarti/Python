@@ -1,0 +1,19 @@
+def january_day(day_of_the_week):
+  while day_of_the_week > 7:
+    day_of_the_week = day_of_the_week - 7
+  day = None 
+  if day_of_the_week == 1:
+    day = "Wednesday"
+  if day_of_the_week == 2:
+    day = "Thursday"
+  if day_of_the_week == 3:
+    day = "Friday"
+  if day_of_the_week == 4:
+    day = "Saturday"  
+  if day_of_the_week == 5:
+    day = "Sunday"
+  if day_of_the_week == 6:
+    day = "Monday"
+  if day_of_the_week == 7:
+    day = "Tuesday"
+  return day
