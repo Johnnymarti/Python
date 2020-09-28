@@ -1,0 +1,95 @@
+#month_to_num is taking in variables "month_to_num" as a string and would give us variable "x" as an integer
+def month_to_nm(month_to_num):
+  x = 0
+  if month_to_num == "January":
+    x = 1
+  if month_to_num == "February":
+    x = 2
+  if month_to_num == "March":
+    x = 3
+  if month_to_num == "April":
+    x = 4
+  if month_to_num == "May":
+    x = 5
+  if month_to_num == "June":
+    x = 6
+  if month_to_num == "July":
+    x = 7
+  if month_to_num == "August":
+    x = 8
+  if month_to_num == "September":
+    x = 9
+  if month_to_num == "October":
+    x = 10
+  if month_to_num == "November":
+    x = 11
+  if month_to_num == "December":
+    x = 12
+  return x
+#variable "x" describes the number of the month
+
+#month_day_to_number takes in  variables "x, day_num" as numbers and gives us variable "x" as a number
+def month_day_to_number(x, day_num):
+  y = None
+  if x == 1:
+    y = day_num
+  if x == 2:
+    y = (day_num + 31)
+  if x == 3:
+    y = (day_num + 60)
+  if x == 4:
+    y = (day_num + 91)
+  if x == 5:
+    y = (day_num + 121)
+  if x == 6:
+    y = (day_num + 152)
+  if x == 7:
+    y = (day_num + 182)
+  if x == 8:
+    y = (day_num + 213)
+  if x == 9:
+    y = (day_num + 244)
+  if x == 10:
+    y = (day_num + 274)
+  if x == 11:
+    y = (day_num + 305)
+  if x == 12:
+    y = (day_num + 335)
+  return y
+#variable "y" represents what day of 2020 it is. 
+
+#number_to_day takes in variable "y" as numbers and returns variable "day" as the name of the day of the week
+def number_to_day(y):
+  while y > 7:
+    y = y - 7
+  day = None 
+  if y == 1:
+    day = "Wednesday"
+  if y == 2:
+    day = "Thursday"
+  if y == 3:
+    day = "Friday"
+  if y == 4:
+    day = "Saturday"  
+  if y == 5:
+    day = "Sunday"
+  if y == 6:
+    day = "Monday"
+  if y == 7:
+    day = "Tuesday"
+  return day
+
+def what_day_of_the_week(month_to_num, day_num):
+  x = month_to_nm(month_to_num) 
+  y = month_day_to_number(x, day_num)
+  day = number_to_day(y)
+  return day
+
+#This should print "Monday"
+print("September 21st, 2020 is a", what_day_of_the_week("September", 21))
+
+#This should print "Saturday"
+print("October 31st, 2020 is a", what_day_of_the_week("October", 31))
+
+#This should print "Thursday"
+print("November 26th, 2020 is a", what_day_of_the_week("November", 26))
