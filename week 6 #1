@@ -1,0 +1,8 @@
+list = []
+
+x = input ()
+while x != "stop":
+  list.append(x)
+  x = input ()
+print (list)
+
