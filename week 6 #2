@@ -1,0 +1,13 @@
+list = []
+
+x = input ("add a food")
+while x != "stop":
+  list.append(x)
+  x = input ("add a food")
+print (list)
+
+x = input ("remove a food")
+while x != "stop":
+  list.remove(x)
+  x = input ("remove a food")
+print (list)
