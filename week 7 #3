@@ -1,0 +1,17 @@
+def countvowels(word):
+  
+  word = word.lower()
+
+  numberofvowels = 0
+
+  for vowels in "aeiouy":
+    count = word.count(vowels)
+    numberofvowels += count
+
+  return numberofvowels
+
+def main():
+  variable = input("Enter a word with vowels:")
+  print(countvowels(variable))
+
+main()
