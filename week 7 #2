@@ -1,0 +1,32 @@
+def hasVowels(word):
+  found = word.find('a')
+  if(found != -1):
+    return True
+
+  found = word.find('e')
+  if(found != -1):
+    return True
+
+  found = word.find('i')
+  if(found != -1):
+    return True
+
+  found = word.find('o')
+  if(found != -1):
+    return True 
+
+  found = word.find('U')
+  if(found != -1):
+    return True
+  found = word.find('y')
+  if(found != -1):
+    return True 
+
+  else:
+    return False
+variable = input("Enter a word with vowels: ")
+  
+if(hasVowels(variable)!= False):
+    print("vowel")
+else:
+  print("no vowel")
