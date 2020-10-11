@@ -1,0 +1,7 @@
+list = []
+x = ""
+while x != "stop":
+  x = input ("Enter a word ")
+  x = x.lower()
+  list.append(x)
+print(list)
