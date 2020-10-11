@@ -1,0 +1,4 @@
+variable = "Hello World"
+print(variable)
+print(variable.upper())
+print(variable.lower())
