@@ -1,0 +1,86 @@
+number = 0 
+
+import random 
+
+print("Who's that Pokemon?!")
+
+
+def print_body(number):
+  if number == 1:
+    print("   O   ")
+  if number == 2:
+    print("   O   ")
+    print("   |   ")
+    print("   |   ")
+  if number == 3:
+    print("   O   ")
+    print("  /|   ")
+    print(" / |   ")
+  if number == 4:
+    print("   O   ")
+    print("  /|\  ")
+    print(" / | \ ")
+  if number == 5:
+    print("   O   ")
+    print("  /|\  ")
+    print(" / | \ ")
+    print("  /    ")
+    print(" /     ")
+  if number == 6:
+    print("   O  |)         O   ")
+    print("  /|--| )    -> /|\  ")
+    print(" / |  |)       / | \ ")
+    print("  / \           / \  ")
+    print(" /   \         /   \ ")   
+
+
+def choose_word():
+  my_list = ['Ivysaur', 'Squirtle', 'Metapod', 'Pidgey', 'Pidgeot', 'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Pikachu', 'Raichu', 'Clefairy', 'Vulpix', 'Zubat', 'Golbat', 'Dugtrio', 'Meowth', 'Persian', 'Psyduck', 'Golduck', 'Mankey', 'Growlithe', 'Poliwag', 'Poliwhirl', 'Poliwrath', 'Machop', 'Machoke', 'Golem', 'Ponyta', 'Magneton', 'Muk', 'Cloyster', 'Gastly', 'Haunter', 'Onix', 'Hypno', 'Kingler', 'Cubone', 'Hitmonchan', 'Rhydon', 'Chansey', 'Horsea',  'Seaking', 'Staryu', 'Starmie', 'Scyther', 'Jynx', 'Tauros', 'Flareon', 'Omanyte', 'Kabuto', 'Kabutops', 'Snorlax', 'Articuno', 'Zapdos', 'Moltres', 'Dragonite', 'Mew']
+  my_word = random.choice(my_list).upper().lower()
+  return my_word
+
+q = choose_word()
+
+my_list = []
+for num in range(len(q)):
+  my_list.append("_")
+
+
+print(my_list)
+
+def find_letter(q , guess):
+  wordList = list(q)
+  while guess in q:
+    letterindex = q.index(guess)
+    wordList[letterindex] = "_"
+  return wordList
+
+
+while number <6:
+  guess = input ("Type a letter: ")
+  if guess not in q: 
+    number+=1
+    print_body(number)
+  if number == 6:
+    print("You Lose")
+  if guess == q:
+    print("Good Job, You won!")
+    break
+  elif guess in q:
+    i = q.index(guess) 
+    print("Good guess!")
+    my_list[i] = guess
+    print(my_list)  
+  if guess in q:
+      print("The Word:")
+      new_list = list(q)
+      num = q.index(guess)
+      my_list[num] = guess
+      my_list = "".join(my_list)
+      print(my_list)
+      if my_list == q:
+        print("You lived! The word was", q)
+        break
+      my_list = list(my_list)
+
+    
