@@ -1,14 +1,21 @@
-def count_lines():
-  
-  import urllib.request
+import urllib.request
 
-  file_name = "https://raw.githubusercontent.com/mlepinski/Python-Worksheets/master/Sonnets.txt"
+def count_lines(file_name):
   my_file = urllib.request.urlopen(file_name)
-
   line_count = 0
 
   for line in my_file:
     line = line.decode("utf-8")
     line_count = line_count + 1
+  return line_count
 
-print(line_count)
+    
+  
+file_name1 = "https://raw.githubusercontent.com/mlepinski/Python-Worksheets/master/Sonnets.txt"
+answer1 = count_lines(file_name1)
+
+file_name2 = file_name = "https://raw.githubusercontent.com/mlepinski/Python-Worksheets/master/coolWords.txt"
+answer2 = count_lines(file_name2)
+
+print("First file number of lines:" , answer1)
+print("Second file number of lines:" , answer2)
