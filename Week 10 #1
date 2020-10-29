@@ -1,0 +1,14 @@
+def count_lines():
+  
+  import urllib.request
+
+  file_name = "https://raw.githubusercontent.com/mlepinski/Python-Worksheets/master/Sonnets.txt"
+  my_file = urllib.request.urlopen(file_name)
+
+  line_count = 0
+
+  for line in my_file:
+    line = line.decode("utf-8")
+    line_count = line_count + 1
+
+print(line_count)
