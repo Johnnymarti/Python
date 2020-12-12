@@ -1,0 +1,62 @@
+!pip install -q praw
+import praw
+
+import praw
+
+reddit = praw.Reddit(client_id="f2Vk50qzGXHk2g", client_secret="z00N7V1BCBM4p8nOC3FKNMJ3zcIJkA", user_agent="NCF intro Python - http://www.github.com/mlepinski/Python-Worksheets" )
+
+c = 1
+
+query = cats
+query2 = turtles
+
+cats = reddit.subreddit("catswithjobs")
+
+print(cats.display_name)    
+
+print("vs.")
+turtles = reddit.subreddit("turtleswithjobs")
+
+print(turtles.display_name) 
+
+print("")
+print("")
+
+print("Subscribers:")
+print("")
+print("catswithjobs:")
+print(subreddit.subscribers)
+print("")
+print("turtleswithjobs:")
+print(subreddit2.subscribers)
+print("")
+print("")
+print("Popular cat titles:")
+print("")
+for submission in reddit.subreddit("cats").hot(limit=10):
+    reddit.subreddit("cats").search(query,time_filter='week')
+    print(submission.title)
+print("")
+print("")
+print("Popular turtle titles:")
+print("")
+for submission in reddit.subreddit("turtles").hot(limit=10):
+    reddit.subreddit("cats").search(query,time_filter='week')
+    print(submission.title)
+print("")
+print("")
+
+
+while c == 1:
+    print("Search for a key word in catswithjobs:")
+    print("")
+    commonwords = input()
+    for submission in cats.search(commonwords,limit=10):
+      print(submission.title)
+    print("")
+    print("")
+    print("Search for a key word in turtleswithjobs:")
+    print("")
+    commonwords2 = input()
+    for submission in turtles.search(commonwords2,limit=10):
+      print(submission.title)
